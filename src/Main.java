@@ -1,15 +1,25 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import javax.swing.*;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+public class Main {
+    public static void main(String[] args) throws Exception {
+        int rowCount = 21;
+        int columnCount = 19;
+        int tileSize = 32;
+        int boardWidth = columnCount * tileSize;
+        int boardHeight = rowCount * tileSize;
+
+        JFrame frame = new JFrame("Pac Man");
+        // frame.setVisible(true);
+        frame.setSize(boardWidth, boardHeight);
+        frame.setLocationRelativeTo(null);
+        frame.setResizable(false);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        PacMan pacmanGame = new PacMan();
+        frame.add(pacmanGame);
+        frame.pack();
+        pacmanGame.requestFocus();
+        frame.setVisible(true);
+
     }
 }
