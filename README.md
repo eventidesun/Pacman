@@ -4,14 +4,12 @@ A clone of the Pac-Man game I coded in **Java**, with all sprites drawn by me us
 
 ## Features
 - Hand-drawn characters and maze assets
-- Ghost enemies with basic AI
 - Pellet collection and scoring
 - Collision detection and player movement
-- Easily extendable for power-ups, levels, and themes
 
 ## Built With
 - Java
-- IntelliJ IDEA (optional)
+- IntelliJ IDEA
 - Sprites drawn in Procreate
 - Git for version control
 
